@@ -12,12 +12,13 @@ int main ()
 		printf("\n\tmas[%d] = %d", i, mas[i]);
 	}	
 	
-	for (i = 0; i < 10; i++)
-		if(((mas[i] % 2) == 0)&&(mas[i] > 0)){
+	for (i = 0; i < 10; i++) {
+		if(((mas[i] % 2) == 0) && (mas[i] > 0)){
 			pro *= mas[i];
 		kol++;
 		}
-	printf("\n\n\tsuma = %d", pro);	
+	}	
+	printf("\n\n\tSuma = %d", pro);	
 	printf("\n\tKoli4estvo: %d", kol);
 		
 	return 0;	
