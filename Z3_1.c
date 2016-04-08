@@ -20,9 +20,9 @@ int main()
 	scanf("%d", &x);
 	
 	if((i = poisk(mas, 10, x)) >= 0)
-		printf("\nVashe 4islo v mas[%d].\n", i);
+		printf("\nVashe 4islo %d v mas[%d].\n", x, i);
 	else
-		printf("\n4islo ne naydeno.\n");
+		printf("\n4islo %d ne naydeno.\n", x);
 	
 	return 0;
 }
