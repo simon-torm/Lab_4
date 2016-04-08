@@ -21,6 +21,8 @@ int main()
 	
 	if((i = poisk(mas, 10, x)) >= 0)
 		printf("\nVashe 4islo v mas[%d].\n", i);
+	else
+		printf("\n4islo ne naydeno.\n");
 	
 	return 0;
 }
