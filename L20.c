@@ -25,7 +25,7 @@ int poisk(int *mas)
 
 int main()
 {
-	int mas[SIZE], i, i2;
+	int mas[SIZE], i;
 	
 	srand(time(0));
 	
