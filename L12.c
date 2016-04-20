@@ -13,8 +13,11 @@ void print_mas(int *mas, int n)
 
 int max_zn(int *mas, int n, int zn_m)
 {
-	int i, zn;
+	int i, zn = zn_m;
 	int max = mas[zn_m];
+	
+	if(zn_m == n)
+		return zn_m;
 	
 	for(i = zn_m; i < n; i++)
 		if(mas[i] > max) {
@@ -38,7 +41,7 @@ void sort(int *mas, int n)
 
 int main()
 {
-	int mas[SIZE], i, zn;
+	int mas[SIZE], i;
 	
 	srand(time(0));
 	
@@ -48,7 +51,7 @@ int main()
 	print_mas(mas, SIZE);
 	printf("\n\n\t\t*******");
 	sort(mas, SIZE);
-	print_mas(mas, SIZE);	
+	print_mas(mas, SIZE);		
 	
 	return 0;
 }
