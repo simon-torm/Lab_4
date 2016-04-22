@@ -22,7 +22,7 @@ int main ()
 	return 0;
 }
 
-int prover (int * mas, int i) 
+int prover (int * mas, int i)
 {
 	int i2; 
 	for(i2 = 0; i2 < i; i2++) {
