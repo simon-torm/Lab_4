@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 5
-#define DIAP 10
+#define SIZE 20
+#define DIAP 30
 
 void print_mas(int *mas, int n)
 {
