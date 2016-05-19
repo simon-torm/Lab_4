@@ -25,7 +25,7 @@ float max_zn(float *mas, int n)
 
 int main()
 {
-	float mas[SIZE], x, max;
+	float mas[SIZE], x = 0, max;
 	int i;
 	
 	srand(time(0));
@@ -37,6 +37,13 @@ int main()
 	max = max_zn(mas, SIZE);
 	
 	printf("\n\tMAX: %lf", max);
+	
+	for(i = 0; i < SIZE; i++) {
+		if(max == mas[i])
+			x++;
+	}
+	
+	printf("\nVsego takih elementov: %d", x);
 	
 	return 0;
 }
