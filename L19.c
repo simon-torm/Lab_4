@@ -11,37 +11,36 @@ void print_mas(int *mas, int n)
 		printf("\n\tmas[%2d] = %d", i, mas[i]);
 }
 
-int poisk(int *mas)
-{
-	int i, i2, f = 0;
-	for(i = 0; i < SIZE; i++)
-		for(i2 = (i + 1); i2 < SIZE; i2++) {
-			if(mas[i] == mas[i2]) {
-				printf(" %d", mas[i]);
-				f = 1;	
-			}	
-		}
-	
-	if(f == 0)	
-		return 0;	
-	else
-		return 1;
-}
-
 int main()
 {
-	int mas[SIZE], i;
+	int mas1[SIZE], mas2[SIZE], i, j, k = 0;
+	int flag;
 	
 	srand(time(0));
 	
 	for(i = 0; i < SIZE; i++)
-		mas[i] = rand() % 50;
+		mas1[i] = rand() % 10;
 	
-	print_mas(mas, SIZE);
+	print_mas(mas1, SIZE);
 	
-	printf("\n4isla povtoryaunsa: ");
-	if(poisk(mas) == 0)
-		printf("\nNETU!");
+	for(i = 0; i < SIZE; i++) {
+		flag = 1;
+		for(j = 0; j < SIZE; j++) {
+			if(j == i)
+				continue;
+			if(mas1[i] == mas1[j]) {
+				flag = 0;
+				break;
+			}
+		}
+		if(flag) {
+			mas2[k] = mas1[i];
+			k++;
+		}
+	}
+	
+	printf("\nMAS2: ");
+	print_mas(mas2, k);
 	
 	return 0;
 }
