@@ -13,7 +13,7 @@ int main ()
 	}	
 	
 	for (i = 0; i < 10; i++) {
-		if(((mas[i] % 2) == 0) && (mas[i] > 0)){
+		if(((i % 2) == 0) && (mas[i] > 0)){
 			pro *= mas[i];
 		kol++;
 		}
