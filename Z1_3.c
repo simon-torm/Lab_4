@@ -5,7 +5,7 @@
 int main()
 {
 	int mas[10];
-	int i, a, b;
+	int i, a, b, j;
 	
 	printf("\nVvedite a: ");
 	scanf("%d", &a);
@@ -14,9 +14,9 @@ int main()
 	
 	srand(time(0));
 	
-	for(i = 0; i < 10; i++) {
-		mas[i] = (rand() % (b - a)) + a;
-		printf("\n\tmas[%d] = %d", i, mas[i]);
+	for(i = a, j = 0; i < b; i++, j++) {
+		mas[j] = i;
+		printf("\n\tmas[%d] = %d", j, mas[j]);
 	}
 	
 	return 0;
